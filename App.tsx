@@ -12,9 +12,10 @@ import {
 import { ThemeProvider } from 'styled-components';
 import theme from './src/global/styles/theme';
 
-// import { Dashboard } from './src/pages/Dashboard';
-import { Register } from './src/pages/Register';
+import { NavigationContainer } from '@react-navigation/native';
+import { AppRoutes } from './src/routes/app.routes';
 
+NavigationContainer;
 export default function App() {
   const [fontsLoaded] = useFonts({
     Poppins_400Regular,
@@ -27,8 +28,10 @@ export default function App() {
   } else {
     return (
       <ThemeProvider theme={theme}>
-        {/* <StatusBar style={'light'} /> */}
-        <Register />
+        <NavigationContainer>
+          <StatusBar style={'light'} />
+          <AppRoutes />
+        </NavigationContainer>
       </ThemeProvider>
     );
   }

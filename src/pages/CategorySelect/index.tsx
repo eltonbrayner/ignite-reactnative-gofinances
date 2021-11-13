@@ -46,7 +46,10 @@ export function CategorySelect({
         style={{ flex: 1, width: '100%' }}
         keyExtractor={(item) => item.key}
         renderItem={({ item }) => (
-          <Category onPress={() => handleCategorySelect(item)}>
+          <Category
+            onPress={() => handleCategorySelect(item)}
+            isActivate={category.key === item.key}
+          >
             <Icon name={item.icon} />
             <Name>{item.name}</Name>
           </Category>
