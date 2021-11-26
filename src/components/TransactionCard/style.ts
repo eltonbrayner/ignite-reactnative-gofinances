@@ -29,9 +29,9 @@ export const Amount = styled.Text<TransactionType>`
 `;
 
 export const Footer = styled.View`
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   margin-top: 19px;
 `;
